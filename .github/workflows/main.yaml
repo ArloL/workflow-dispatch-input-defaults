@@ -17,4 +17,4 @@ jobs:
   debug:
     runs-on: ubuntu-latest
     steps:
-    - run: set
+    - run: echo ${DOCKER_CACHE_ENABLED:-iamsadbecauseiamunset}
