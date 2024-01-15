@@ -1,0 +1,20 @@
+name: workflow-dispatch-input-defaults
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+    inputs:
+      DOCKER_CACHE_ENABLED:
+        description: "Should the Docker cache be enabled?"
+        required: false
+        default: "true"
+
+env:
+  DOCKER_CACHE_ENABLED: ${{ inputs.DOCKER_CACHE_ENABLED }}
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+    - run: set
