@@ -11,7 +11,7 @@ on:
         default: "true"
 
 env:
-  DOCKER_CACHE_ENABLED: ${{ inputs.DOCKER_CACHE_ENABLED }}
+  DOCKER_CACHE_ENABLED: ${{ inputs.DOCKER_CACHE_ENABLED || 'true' }}
 
 jobs:
   debug:
