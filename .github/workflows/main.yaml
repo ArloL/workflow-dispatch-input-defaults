@@ -2,7 +2,7 @@ name: workflow-dispatch-input-defaults
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/6 * * * *'
   workflow_dispatch:
     inputs:
       DOCKER_CACHE_ENABLED:
